@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:docs.astronvim.com)",
+      "Read(//Users/tao/.config/nvim/**)",
+      "Bash(lua:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

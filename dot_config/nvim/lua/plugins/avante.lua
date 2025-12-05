@@ -82,10 +82,20 @@ return {
 			},
 			cerebras = {
 				__inherited_from = "openai",
-				endpoint = "https://api.cerebras.ai/v1/",
+				endpoint = "https://api.factory.ai/v1/",
 				api_key_name = "CEREBRAS_API_KEY",
-				model = "qwen-3-coder-480b",
+				model = "claude-sonnet-4-5-20250929",
 				extra_request_body = {
+					max_tokens = 32768,
+				},
+			},
+			droid = {
+				__inherited_from = "openai",
+				endpoint = "https://api.factory.ai/v1/",
+				api_key_name = "DROID_API_KEY",
+				model = "claude-sonnet-4-5-20250929",
+				extra_request_body = {
+					temperature = 0.75,
 					max_tokens = 32768,
 				},
 			},
@@ -109,6 +119,9 @@ return {
 					temperature = 0.75,
 					max_tokens = 32000,
 				},
+			},
+			morph = {
+				model = "morph-v3-large",
 			},
 		},
 		behaviour = {

@@ -110,8 +110,8 @@ return {
 				},
 			},
 			minimax = {
-				__inherited_from = "openai",
-				endpoint = "https://api.minimaxi.com/v1",
+				__inherited_from = "claude",
+				endpoint = "https://api.minimaxi.com/anthropic",
 				api_key_name = "MINIMAX_API_KEY",
 				model = "MiniMax-M2",
 				timeout = 30000, -- Timeout in milliseconds

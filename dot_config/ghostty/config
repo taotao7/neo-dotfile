@@ -1,9 +1,9 @@
 font-family = "DankMono Nerd Font Mono"
 font-size = 16
 # theme=dark: "catppuccin-frappe",light: "catppuccin-latte"
-theme = dark:everforest-dark,light:everforest-light
+theme = dark:analog-dream-magnetic-night,light:analog-dream-beige-terminal
 # theme=dark: "seolul256",light: "seoul256-light"
-background-opacity = 0.9
+background-opacity = 1
 window-height=60
 window-width=100
 window-padding-x = 0

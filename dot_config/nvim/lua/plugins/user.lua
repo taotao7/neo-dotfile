@@ -55,18 +55,18 @@ return {
 			npairs.add_rules(
 				{
 					Rule("$", "$", { "tex", "latex" })
-					-- don't add a pair if the next character is %
-							:with_pair(cond.not_after_regex("%%"))
-					-- don't add a pair if  the previous character is xxx
-							:with_pair(
-								cond.not_before_regex("xxx", 3)
-							)
-					-- don't move right when repeat character
-							:with_move(cond.none())
-					-- don't delete if the next character is xx
-							:with_del(cond.not_after_regex("xx"))
-					-- disable adding a newline when you press <cr>
-							:with_cr(cond.none()),
+						-- don't add a pair if the next character is %
+						:with_pair(cond.not_after_regex("%%"))
+						-- don't add a pair if  the previous character is xxx
+						:with_pair(
+							cond.not_before_regex("xxx", 3)
+						)
+						-- don't move right when repeat character
+						:with_move(cond.none())
+						-- don't delete if the next character is xx
+						:with_del(cond.not_after_regex("xx"))
+						-- disable adding a newline when you press <cr>
+						:with_cr(cond.none()),
 				},
 				-- disable for .vim files, but it work for another filetypes
 				Rule("a", "a", "-vim")
@@ -85,7 +85,7 @@ return {
 		"p00f/alabaster.nvim",
 		enabled = false,
 	},
-	{ "akinsho/horizon.nvim",   version = "*",  enabled = true },
+	{ "akinsho/horizon.nvim", version = "*", enabled = true },
 	{
 		"augmentcode/augment.vim",
 		config = function()
@@ -101,7 +101,7 @@ return {
 	--   vim.g.augment_workspace_folders = ["/Users/tao/workspace/org-management-temp"]
 	-- end,
 	-- },
-	{ "yetone/avante.nvim",     enabled = true },
+	{ "yetone/avante.nvim", enabled = true },
 	{
 		"coder/claudecode.nvim",
 		dependencies = { "folke/snacks.nvim" },
@@ -174,25 +174,42 @@ return {
 			})
 		end,
 	},
-	-- auto change theme
+	{
+		"taotao7/cassette-futurism-nvim",
+		name = "cassette-futurism",
+		opts = {
+			-- 这里的配置会被保留，即使后面动态切换了主题
+			theme = "neon",
+			transparent_background = false, -- 示例：全局生效
+			integrations = {
+				neotree = true,
+				heirline = true,
+			},
+		},
+	},
+
+	-- 自动切换插件配置
 	{
 		"f-person/auto-dark-mode.nvim",
 		opts = {
+			update_interval = 3000,
+			fallback = "dark",
 			set_dark_mode = function()
 				vim.api.nvim_set_option_value("background", "dark", {})
-				vim.g.everforest_background = "hard"
-				vim.cmd("colorscheme everforest")
+				-- 关键点：增量更新主题配置，保留其他设置
+				require("cassette-futurism").setup({ theme = "neon" })
+				vim.cmd("colorscheme cassette-futurism")
 			end,
 			set_light_mode = function()
 				vim.api.nvim_set_option_value("background", "light", {})
-				vim.g.everforest_background = "hard"
-				vim.cmd("colorscheme everforest")
+				-- 关键点：切换为亮色主题
+				require("cassette-futurism").setup({ theme = "plastic" })
+				vim.cmd("colorscheme cassette-futurism")
 			end,
-			update_interval = 3000,
-			fallback = "dark",
 		},
 	},
 	{
 		"tribela/vim-transparent",
+		enabled = false,
 	},
 }

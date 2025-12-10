@@ -425,164 +425,25 @@ return {
 			LSPLoading10 = "⠏",
 		},
 
-		-- Seoul256 Status Line Configuration
+		-- Status Line Configuration
 		status = {
-			-- Seoul256 color scheme for both light and dark modes
-			colors = function(hl)
-				local get_hlgroup = require("astroui").get_hlgroup
+			-- Let cassette-futurism handle the colors by removing hardcoded Seoul256 values
+			-- colors = function(hl) ... end,
 
-				-- Detect if we're in light or dark mode
-				local bg = vim.opt.background:get()
-
-				if bg == "light" then
-					-- Seoul256 Light Mode Colors
-					return {
-						-- Basic colors - 设置为透明
-						fg = "#4e4e4e",
-						bg = "none",
-						section_fg = "#4e4e4e",
-						section_bg = "none",
-
-						-- Mode colors (light mode)
-						normal = "#5f8700", -- Green
-						insert = "#0087d7", -- Blue
-						visual = "#d75f00", -- Orange
-						replace = "#d70000", -- Red
-						command = "#8700d7", -- Purple
-						terminal = "#005f87", -- Dark Blue
-						inactive = "#9e9e9e", -- Gray
-
-						-- Git colors (light mode)
-						git_branch_fg = "#875f00", -- Brown
-						git_added = "#5f8700", -- Green
-						git_changed = "#d75f00", -- Orange
-						git_removed = "#d70000", -- Red
-
-						-- LSP/Diagnostic colors (light mode)
-						diag_ERROR = "#d70000", -- Red
-						diag_WARN = "#d75f00", -- Orange
-						diag_INFO = "#0087d7", -- Blue
-						diag_HINT = "#5f8700", -- Green
-
-						-- TreeSitter
-						treesitter_fg = "#875f87", -- Purple
-
-						-- Winbar colors - 设置为透明
-						winbar_fg = "#4e4e4e",
-						winbar_bg = "none",
-						winbarnc_fg = "#9e9e9e",
-						winbarnc_bg = "none",
-
-						-- Buffer colors - 设置为透明
-						buffer_fg = "#9e9e9e",
-						buffer_path_fg = "#767676",
-						buffer_close_fg = "#9e9e9e",
-						buffer_bg = "none",
-						buffer_active_fg = "#4e4e4e",
-						buffer_active_path_fg = "#767676",
-						buffer_active_close_fg = "#d70000",
-						buffer_active_bg = "none",
-						buffer_visible_fg = "#4e4e4e",
-						buffer_visible_path_fg = "#767676",
-						buffer_visible_close_fg = "#d70000",
-						buffer_visible_bg = "none",
-
-						-- Tabline colors - 设置为透明
-						tabline_bg = "none",
-						tabline_fg = "#4e4e4e",
-						tab_fg = "#9e9e9e",
-						tab_bg = "none",
-						tab_active_fg = "#4e4e4e",
-						tab_active_bg = "none",
-						tab_close_fg = "#d70000",
-						tab_close_bg = "none",
-
-						-- Scrollbar
-						scrollbar = "#875f87",
-					}
-				else
-					-- Seoul256 Dark Mode Colors
-					return {
-						-- Basic colors - 设置为透明
-						fg = "#d0d0d0",
-						bg = "none",
-						section_fg = "#d0d0d0",
-						section_bg = "none",
-
-						-- Mode colors (dark mode)
-						normal = "#87d75f", -- Light Green
-						insert = "#5fafd7", -- Light Blue
-						visual = "#ffaf5f", -- Light Orange
-						replace = "#ff5f5f", -- Light Red
-						command = "#d787ff", -- Light Purple
-						terminal = "#5f87af", -- Medium Blue
-						inactive = "#626262", -- Dark Gray
-
-						-- Git colors (dark mode)
-						git_branch_fg = "#dfaf87", -- Light Brown
-						git_added = "#87d75f", -- Light Green
-						git_changed = "#ffaf5f", -- Light Orange
-						git_removed = "#ff5f5f", -- Light Red
-
-						-- LSP/Diagnostic colors (dark mode)
-						diag_ERROR = "#ff5f5f", -- Light Red
-						diag_WARN = "#ffaf5f", -- Light Orange
-						diag_INFO = "#5fafd7", -- Light Blue
-						diag_HINT = "#87d75f", -- Light Green
-
-						-- TreeSitter
-						treesitter_fg = "#d7afd7", -- Light Purple
-
-						-- Winbar colors - 设置为透明
-						winbar_fg = "#d0d0d0",
-						winbar_bg = "none",
-						winbarnc_fg = "#808080",
-						winbarnc_bg = "none",
-
-						-- Buffer colors - 设置为透明
-						buffer_fg = "#808080",
-						buffer_path_fg = "#626262",
-						buffer_close_fg = "#808080",
-						buffer_bg = "none",
-						buffer_active_fg = "#d0d0d0",
-						buffer_active_path_fg = "#949494",
-						buffer_active_close_fg = "#ff5f5f",
-						buffer_active_bg = "none",
-						buffer_visible_fg = "#d0d0d0",
-						buffer_visible_path_fg = "#949494",
-						buffer_visible_close_fg = "#ff5f5f",
-						buffer_visible_bg = "none",
-
-						-- Tabline colors - 设置为透明
-						tabline_bg = "none",
-						tabline_fg = "#d0d0d0",
-						tab_fg = "#808080",
-						tab_bg = "none",
-						tab_active_fg = "#d0d0d0",
-						tab_active_bg = "none",
-						tab_close_fg = "#ff5f5f",
-						tab_close_bg = "none",
-
-						-- Scrollbar
-						scrollbar = "#d7afd7",
-					}
-				end
-			end,
-
-			-- Seoul256 separators
+			-- Cool separators (Powerline/Rounded style)
 			separators = {
 				none = { "", "" },
-				left = { "", "  " },
-				right = { "  ", "" },
+				left = { "", "" },
+				right = { "", "" },
 				center = { "  ", "  " },
-				tab = { "", " " },
-				breadcrumbs = "  ",
-				path = "  ",
+				tab = { "", "" },
+				breadcrumbs = "  ",
+				path = "  ",
 			},
 
-			-- Seoul256 attributes
+			-- Attributes
 			attributes = {
-				buffer_active = { bold = true },
+				buffer_active = { bold = true, italic = true },
 				buffer_picker = { bold = true },
 				macro_recording = { bold = true },
 				git_branch = { bold = true },

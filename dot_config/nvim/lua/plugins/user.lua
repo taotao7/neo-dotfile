@@ -157,10 +157,11 @@ return {
 	},
 	{
 		"taotao7/i18n.nvim",
+		-- dir = "/Users/tao/tool/i18n.nvim",
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
 		},
-		enabled = false,
+		enabled = true,
 		config = function()
 			require("i18n").setup({
 				func_pattern = {

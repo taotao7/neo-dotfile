@@ -9,5 +9,9 @@ window-width=100
 window-padding-x = 0
 window-padding-y = 0
 keybind = shift+enter=text:\n
+command = /bin/sh -c "/opt/homebrew/bin/tmux attach || /opt/homebrew/bin/tmux new"
 
+cursor-style = block
+cursor-style-blink = true
+custom-shader = ~/.config/ghostty/shaders/sonic_boom_cursor.glsl
 

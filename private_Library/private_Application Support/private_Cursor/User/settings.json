@@ -1,0 +1,42 @@
+{
+  "editor.fontFamily": "'Berkeley Mono',Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 16,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "window.autoDetectColorScheme": true,
+  "i18n-ally.displayLanguage": "zh",
+  "editor.formatOnSave": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "cursor.composer.shouldAutoAcceptDiffs": false,
+  "breadcrumbs.enabled": false,
+  "editor.guides.indentation": false,
+  "terminal.integrated.fontSize": 14,
+  "editor.stickyScroll.enabled": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "PrateekMahendrakar.prettyxml"
+  },
+  "workbench.preferredDarkColorTheme": "Analog Dream: Magnetic Night",
+  "git.blame.statusBarItem.enabled": true,
+  "workbench.editor.enablePreview": false,
+  "everforest.darkContrast": "hard",
+  "everforest.lightContrast": "hard",
+  "claudeCode.initialPermissionMode": "acceptEdits",
+  "claudeCode.allowDangerouslySkipPermissions": true,
+  "claudeCode.preferredLocation": "panel",
+  "workbench.preferredLightColorTheme": "Analog Dream: Beige Terminal",
+  "editor.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
+  "terminal.integrated.smoothScrolling": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on"
+}

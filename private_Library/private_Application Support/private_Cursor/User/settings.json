@@ -1,5 +1,5 @@
 {
-  "editor.fontFamily": "'Berkeley Mono',Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "'Ioskeley Mono',Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 16,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,

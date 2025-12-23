@@ -64,7 +64,7 @@ return {
 				__inherited_from = "openai",
 				api_key_name = "ZHIPU",
 				endpoint = "https://open.bigmodel.cn/api/paas/v4/",
-				model = "glm-4.6",
+				model = "glm-4.7",
 			},
 			openrouter = {
 				__inherited_from = "openai",

@@ -1,5 +1,5 @@
-font-family = "DankMono Nerd Font Mono"
-font-size = 16
+font-family = "Ioskeley Mono"
+font-size = 14
 # theme=dark: "catppuccin-frappe",light: "catppuccin-latte"
 theme = dark:analog-dream-magnetic-night,light:analog-dream-beige-terminal
 # theme=dark: "seolul256",light: "seoul256-light"

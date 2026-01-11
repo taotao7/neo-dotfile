@@ -13,19 +13,19 @@
       "model": "openai/gpt-5.2"
     },
     "explore": {
-      "model": "antigravity-gemini-3-pro"
+      "model": "google/antigravity-gemini-3-pro"
     },
     "Prometheus (Planner)": {
       "model": "openai/gpt-5.2"
     },
     "Metis (Plan Consultant)": {
-      "model": "antigravity-gemini-3-flash"
+      "model": "google/antigravity-gemini-3-flash"
     },
     "frontend-ui-ux-engineer": {
-      "model": "antigravity-gemini-3-pro"
+      "model": "google/antigravity-gemini-3-pro"
     },
     "document-writer": {
-      "model": "antigravity-claude-sonnet-4-5"
+      "model": "gooogle/antigravity-claude-sonnet-4-5"
     },
     "multimodal-looker": {
       "model": "google/antigravity-gemini-3-flash"

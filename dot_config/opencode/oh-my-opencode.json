@@ -3,7 +3,7 @@
   "google_auth": false,
   "agents": {
     "sisyphus": {
-      "model": "google/antigravity-claude-opus-4-5-thinking",
+      "model": "cursor/opus-4.5",
       "temperature": 0.3
     },
     "oracle": {

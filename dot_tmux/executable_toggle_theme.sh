@@ -13,11 +13,11 @@ fi
 CURRENT_THEME=$(cat "$STATE_FILE")
 
 if [ "$CURRENT_THEME" == "dark" ]; then
-    tmux source-file "$LIGHT_THEME"
     echo "light" > "$STATE_FILE"
+    tmux source-file "$HOME/.tmux.conf"
     tmux display-message " ☀️  LIGHT MODE ACTIVATED"
 else
-    tmux source-file "$DARK_THEME"
     echo "dark" > "$STATE_FILE"
+    tmux source-file "$HOME/.tmux.conf"
     tmux display-message " 🌙  DARK MODE ACTIVATED"
 fi

@@ -15,5 +15,5 @@ command = /bin/sh -c "/opt/homebrew/bin/tmux attach || /opt/homebrew/bin/tmux ne
 cursor-style = bar
 cursor-style-blink = false
 custom-shader = ~/.config/ghostty/shaders/sonic_boom_cursor.glsl
-macos-titlebar-style = hidden
+window-decoration = none
 

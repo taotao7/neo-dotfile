@@ -1,0 +1,46 @@
+# ── 焦点切换 (alt + hjkl) ─────────────────────────────────────────
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+# ── 窗口移动/交换位置 (shift + alt + hjkl) ───────────────────────
+shift + alt - h : yabai -m window --warp west
+shift + alt - j : yabai -m window --warp south
+shift + alt - k : yabai -m window --warp north
+shift + alt - l : yabai -m window --warp east
+
+# ── 浮动窗口用方向键移动 (shift + ctrl + hjkl) ───────────────────
+shift + ctrl - h : yabai -m window --move rel:-40:0
+shift + ctrl - l : yabai -m window --move rel:40:0
+shift + ctrl - j : yabai -m window --move rel:0:40
+shift + ctrl - k : yabai -m window --move rel:0:-40
+
+# ── 切换浮动 / 全屏 ───────────────────────────────────────────────
+alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+alt - f : yabai -m window --toggle zoom-fullscreen
+
+# ── 切换 Space (alt + 1-9) ────────────────────────────────────────
+alt - 1 : yabai -m space --focus 1
+alt - 2 : yabai -m space --focus 2
+alt - 3 : yabai -m space --focus 3
+alt - 4 : yabai -m space --focus 4
+alt - 5 : yabai -m space --focus 5
+
+# ── 把窗口扔到 Space (shift + alt + 1-5) ─────────────────────────
+shift + alt - 1 : yabai -m window --space 1; yabai -m space --focus 1
+shift + alt - 2 : yabai -m window --space 2; yabai -m space --focus 2
+shift + alt - 3 : yabai -m window --space 3; yabai -m space --focus 3
+shift + alt - 4 : yabai -m window --space 4; yabai -m space --focus 4
+shift + alt - 5 : yabai -m window --space 5; yabai -m space --focus 5
+
+# ── 布局平衡 ─────────────────────────────────────────────────────
+shift + alt - 0 : yabai -m space --balance
+
+# ── 多显示器：切换焦点 (alt + ,/.) ───────────────────────────────
+alt - 0x2B : yabai -m display --focus prev
+alt - 0x2F : yabai -m display --focus next
+
+# ── 多显示器：把窗口扔到其他屏幕 (shift + alt + ,/.) ─────────────
+shift + alt - 0x2B : yabai -m window --display prev; yabai -m display --focus prev
+shift + alt - 0x2F : yabai -m window --display next; yabai -m display --focus next

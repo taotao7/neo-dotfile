@@ -146,6 +146,10 @@ return {
 		"rebelot/heirline.nvim",
 		opts = function(_, opts)
 			opts.winbar = nil
+			local status = require("astroui.status")
+			opts.statusline[1] = status.component.mode { padding = { left = 1, right = 1 } }
+			table.insert(opts.statusline, 2, { provider = " ", hl = { bg = "NONE" } })
+			opts.statusline[#opts.statusline] = status.component.mode { surround = { separator = "right" }, padding = { left = 1, right = 1 } }
 		end,
 	},
 	{

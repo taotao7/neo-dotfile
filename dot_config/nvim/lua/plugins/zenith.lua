@@ -9,7 +9,7 @@ return {
 		config = function()
 			require("zenith").setup({
 				dim_inactive = true,
-				transparent = false,
+				transparent = true,
 			})
 		end,
 	},

@@ -197,15 +197,13 @@ return {
 			fallback = "dark",
 			set_dark_mode = function()
 				vim.api.nvim_set_option_value("background", "dark", {})
-				-- 关键点：增量更新主题配置，保留其他设置
-				require("cassette-futurism").setup({ theme = "neon" })
-				vim.cmd("colorscheme cassette-futurism")
+				require("zenith").setup({ style = "dark" })
+				vim.cmd("colorscheme zenith")
 			end,
 			set_light_mode = function()
 				vim.api.nvim_set_option_value("background", "light", {})
-				-- 关键点：切换为亮色主题
-				require("cassette-futurism").setup({ theme = "plastic" })
-				vim.cmd("colorscheme cassette-futurism")
+				require("zenith").setup({ style = "light" })
+				vim.cmd("colorscheme zenith")
 			end,
 		},
 	},

@@ -1,17 +1,19 @@
 font-family = "ZedMono Nerd Font Mono"
 font-size = 14
 # theme=dark: "catppuccin-frappe",light: "catppuccin-latte"
-theme = dark:analog-dream-magnetic-night,light:analog-dream-beige-terminal
-# theme=dark: "seolul256",light: "seoul256-light"
-background-opacity = 1
+# theme = dark:analog-dream-magnetic-night,light:analog-dream-beige-terminal
+theme = dark:zenith-dark,light:zenith-light
+background-opacity = 0.92
+background-blur-radius = 20
 window-height=60
 window-width=100
-window-padding-x = 0
-window-padding-y = 0
+window-padding-x = 8
+window-padding-y = 4
 keybind = shift+enter=text:\n
 command = /bin/sh -c "/opt/homebrew/bin/tmux attach || /opt/homebrew/bin/tmux new"
 
-cursor-style = block
-cursor-style-blink = true
+cursor-style = bar
+cursor-style-blink = false
 custom-shader = ~/.config/ghostty/shaders/sonic_boom_cursor.glsl
+macos-titlebar-style = hidden
 

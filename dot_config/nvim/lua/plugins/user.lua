@@ -55,18 +55,18 @@ return {
 			npairs.add_rules(
 				{
 					Rule("$", "$", { "tex", "latex" })
-					-- don't add a pair if the next character is %
-							:with_pair(cond.not_after_regex("%%"))
-					-- don't add a pair if  the previous character is xxx
-							:with_pair(
-								cond.not_before_regex("xxx", 3)
-							)
-					-- don't move right when repeat character
-							:with_move(cond.none())
-					-- don't delete if the next character is xx
-							:with_del(cond.not_after_regex("xx"))
-					-- disable adding a newline when you press <cr>
-							:with_cr(cond.none()),
+						-- don't add a pair if the next character is %
+						:with_pair(cond.not_after_regex("%%"))
+						-- don't add a pair if  the previous character is xxx
+						:with_pair(
+							cond.not_before_regex("xxx", 3)
+						)
+						-- don't move right when repeat character
+						:with_move(cond.none())
+						-- don't delete if the next character is xx
+						:with_del(cond.not_after_regex("xx"))
+						-- disable adding a newline when you press <cr>
+						:with_cr(cond.none()),
 				},
 				-- disable for .vim files, but it work for another filetypes
 				Rule("a", "a", "-vim")
@@ -78,86 +78,19 @@ return {
 		enabled = true,
 	},
 	{
-		"junegunn/seoul256.vim",
-		enabled = false,
-	},
-	{
 		"p00f/alabaster.nvim",
 		enabled = false,
 	},
-	{ "akinsho/horizon.nvim",   version = "*",  enabled = true },
-	{
-		"augmentcode/augment.vim",
-		config = function()
-			vim.g.augment_workspace_folders = { "/home/tao/workspace" }
-			-- require("snacks").setup({
-		end,
-		enabled = false,
-	},
-	{ "EdenEast/nightfox.nvim", enabled = false },
-	-- {
-	--   "augmentcode/augment.vim",
-	--   config = function(plugin, opts)
-	--   vim.g.augment_workspace_folders = ["/Users/tao/workspace/org-management-temp"]
-	-- end,
-	-- },
-	{ "yetone/avante.nvim",     enabled = false },
-	{
-		"coder/claudecode.nvim",
-		dependencies = { "folke/snacks.nvim" },
-		enabled = false,
-		config = true,
-		-- keys = {
-		-- 	{ "<leader>a",  nil,                              desc = "AI/Claude Code" },
-		-- 	{ "<leader>ac", "<cmd>ClaudeCode<cr>",            desc = "Toggle Claude" },
-		-- 	{ "<leader>af", "<cmd>ClaudeCodeFocus<cr>",       desc = "Focus Claude" },
-		-- 	{ "<leader>ar", "<cmd>ClaudeCode --resume<cr>",   desc = "Resume Claude" },
-		-- 	{ "<leader>aC", "<cmd>ClaudeCode --continue<cr>", desc = "Continue Claude" },
-		-- 	{ "<leader>am", "<cmd>ClaudeCodeSelectModel<cr>", desc = "Select Claude model" },
-		-- 	{ "<leader>ab", "<cmd>ClaudeCodeAdd %<cr>",       desc = "Add current buffer" },
-		-- 	{ "<leader>as", "<cmd>ClaudeCodeSend<cr>",        mode = "v",                  desc = "Send to Claude" },
-		-- 	{
-		-- 		"<leader>as",
-		-- 		"<cmd>ClaudeCodeTreeAdd<cr>",
-		-- 		desc = "Add file",
-		-- 		ft = { "NvimTree", "neo-tree", "oil" },
-		-- 	},
-		-- 	-- Diff management
-		-- 	{ "<leader>aa", "<cmd>ClaudeCodeDiffAccept<cr>", desc = "Accept diff" },
-		-- 	{ "<leader>ad", "<cmd>ClaudeCodeDiffDeny<cr>",   desc = "Deny diff" },
-		-- },
-	},
-	-- {
-	-- 	"marcinjahn/gemini-cli.nvim",
-	-- 	cmd = "Gemini",
-	-- 	-- Example key mappings for common actions:
-	-- 	keys = {
-	-- 		{ "<leader>a/", "<cmd>Gemini toggle<cr>", desc = "Toggle Gemini CLI" },
-	-- 		{ "<leader>aa", "<cmd>Gemini ask<cr>", desc = "Ask Gemini", mode = { "n", "v" } },
-	-- 		{ "<leader>af", "<cmd>Gemini add_file<cr>", desc = "Add File" },
-	-- 	},
-	-- 	dependencies = {
-	-- 		"folke/snacks.nvim",
-	-- 	},
-	-- 	config = true,
-	-- },
-	{ "supermaven-inc/supermaven-nvim", enabled = false },
 	{
 		"rebelot/heirline.nvim",
 		opts = function(_, opts)
 			opts.winbar = nil
 			local status = require("astroui.status")
-			opts.statusline[1] = status.component.mode { padding = { left = 1, right = 1 } }
+			opts.statusline[1] = status.component.mode({ padding = { left = 1, right = 1 } })
 			table.insert(opts.statusline, 2, { provider = " ", hl = { bg = "NONE" } })
-			opts.statusline[#opts.statusline] = status.component.mode { surround = { separator = "right" }, padding = { left = 1, right = 1 } }
+			opts.statusline[#opts.statusline] =
+				status.component.mode({ surround = { separator = "right" }, padding = { left = 1, right = 1 } })
 		end,
-	},
-	{
-		"sourcegraph/amp.nvim",
-		enabled = false,
-		branch = "main",
-		lazy = false,
-		opts = { auto_start = true, log_level = "info" },
 	},
 	{
 		"taotao7/i18n.nvim",
@@ -165,6 +98,7 @@ return {
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
 		},
+		branch = "main",
 		enabled = true,
 		config = function()
 			require("i18n").setup({
@@ -178,38 +112,6 @@ return {
 				show_mode = "translation_conceal",
 			})
 		end,
-	},
-	{
-		"taotao7/cassette-futurism-nvim",
-		name = "cassette-futurism",
-		opts = {
-			-- 这里的配置会被保留，即使后面动态切换了主题
-			theme = "neon",
-			transparent_background = false, -- 示例：全局生效
-			integrations = {
-				neotree = true,
-				heirline = true,
-			},
-		},
-	},
-
-	-- 自动切换插件配置
-	{
-		"f-person/auto-dark-mode.nvim",
-		opts = {
-			update_interval = 3000,
-			fallback = "dark",
-			set_dark_mode = function()
-				vim.api.nvim_set_option_value("background", "dark", {})
-				require("zenith").setup({ style = "dark" })
-				vim.cmd("colorscheme zenith")
-			end,
-			set_light_mode = function()
-				vim.api.nvim_set_option_value("background", "light", {})
-				require("zenith").setup({ style = "light" })
-				vim.cmd("colorscheme zenith")
-			end,
-		},
 	},
 	{
 		"sphamba/smear-cursor.nvim",
@@ -243,7 +145,7 @@ return {
 	},
 	{
 		"tribela/vim-transparent",
-		enabled = false,
+		enabled = true,
 	},
 	{
 		"folke/sidekick.nvim",

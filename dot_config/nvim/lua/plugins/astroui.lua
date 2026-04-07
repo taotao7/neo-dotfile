@@ -3,13 +3,13 @@ return {
 	"AstroNvim/astroui",
 	---@type AstroUIOpts
 	opts = {
-		colorscheme = "zenith",
 		highlights = {
 			init = {
-				NeoTreeNormal   = { bg = "none" },
+				NeoTreeNormal = { bg = "none" },
 				NeoTreeNormalNC = { bg = "none" },
-				StatusLine      = { bg = "none" },
-				StatusLineNC    = { bg = "none" },
+				StatusLine = { bg = "none" },
+				StatusLineNC = { bg = "none" },
+				TabLineFill = { bg = "none" },
 			},
 		},
 		icons = {
@@ -53,9 +53,9 @@ return {
 				},
 			},
 			colors = function(colors)
-				colors.normal        = "#b070e8"  -- zenith purple
-				colors.bg            = "NONE"
-				colors.section_bg    = "NONE"
+				colors.normal = "#b070e8" -- zenith purple
+				colors.bg = "NONE"
+				colors.section_bg = "NONE"
 				return colors
 			end,
 		},

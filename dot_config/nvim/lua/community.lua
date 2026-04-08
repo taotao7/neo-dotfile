@@ -18,7 +18,7 @@ return {
 	{ import = "astrocommunity.colorscheme.everforest" },
 	{ import = "astrocommunity.pack.lua" },
 	{ import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
-	{ import = "astrocommunity.completion.copilot-lua-cmp" },
+	{ import = "astrocommunity.completion.blink-copilot" },
 	-- { import = "astrocommunity.completion.coq_nvim" },
 	-- { import = "astrocommunity.completion.codeium-nvim" },
 	-- { import = "astrocommunity.completion.blink-cmp" },

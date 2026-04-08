@@ -9,8 +9,6 @@ local inlayHints = {
 ---@type LazySpec
 return {
 	"AstroNvim/astrolsp",
-	tag = "stable",
-	pin = true,
 
 	---@type AstroLSPOpts
 	opts = {

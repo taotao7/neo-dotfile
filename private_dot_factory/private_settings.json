@@ -1,7 +1,7 @@
 {
-  "logoAnimation": "always",
+  "logoAnimation": "off",
   "diffMode": "github",
-  "terminalColorMode": "light",
+  "terminalColorMode": "dark",
   "hooks": {
     "PreToolUse": [
       {
@@ -21,12 +21,12 @@
     "command": "/Users/tao/.factory/statusline.sh"
   },
   "sessionDefaultSettings": {
-    "model": "glm-5.1",
+    "model": "custom:company-opus-3",
     "reasoningEffort": "none",
     "interactionMode": "auto",
     "autonomyLevel": "high",
     "autonomyMode": "auto-high",
-    "specModeModel": "gpt-5.4(high)",
+    "specModeModel": "custom:GPT-5.4-Codex-(High)-66",
     "specModeReasoningEffort": "none"
   },
   "missionModelSettings": {
@@ -708,5 +708,9 @@
       "noImageSupport": false,
       "provider": "openai"
     }
-  ]
+  ],
+  "compactionModelMode": "factory-default",
+  "showThinkingInMainView": true,
+  "showTokenUsageIndicator": true,
+  "nerdFont": true
 }

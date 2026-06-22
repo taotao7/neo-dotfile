@@ -70,6 +70,11 @@
     }
   },
   "mcp": {
+    "codebase-memory-mcp": {
+      "type": "local",
+      "command": ["/Users/tao/.local/bin/codebase-memory-mcp"],
+      "enabled": true
+    },
     "web-search-prime": {
       "type": "remote",
       "url": "https://api.z.ai/api/mcp/web_search_prime/mcp",

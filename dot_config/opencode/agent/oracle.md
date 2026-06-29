@@ -1,7 +1,7 @@
 ---
 description: Use for high-stakes architecture choices, ambiguous debugging, complex tradeoffs, deep reasoning, strategic technical decisions, and decisions under uncertainty.
 mode: all
-model: zai-coding-plan/glm-5.2
+model: deepseek/deepseek-v4-pro
 variant: max
 permission:
   read: allow

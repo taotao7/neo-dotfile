@@ -1,8 +1,8 @@
 ---
 description: Use for architecture planning, task decomposition, migration plans, and pre-implementation risk analysis.
 mode: all
-model: openai/gpt-5.5
-variant: xhigh
+model: zai-coding-plan/glm-5.2
+variant: max
 permission:
   read: allow
   glob: allow

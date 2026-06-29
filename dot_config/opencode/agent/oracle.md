@@ -1,8 +1,8 @@
 ---
 description: Use for high-stakes architecture choices, ambiguous debugging, complex tradeoffs, deep reasoning, strategic technical decisions, and decisions under uncertainty.
 mode: all
-model: openai/gpt-5.5
-variant: xhigh
+model: zai-coding-plan/glm-5.2
+variant: max
 permission:
   read: allow
   glob: allow

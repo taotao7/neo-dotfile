@@ -1,50 +1,14 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": ["superpowers@git+https://github.com/obra/superpowers.git"],
-  "model": "company/claude-opus-4-8",
-  "small_model": "zai-coding-plan/glm-5.2",
-  "default_agent": "build",
-  "permission": "allow",
-  "provider": {
-    "company": {
-      "npm": "@ai-sdk/openai-compatible",
-      "name": "Company Opus",
-      "options": {
-        "baseURL": "http://localhost:8317/v1",
-        "apiKey": "sk-0l3IJWCxwYrfRoG0G"
-      },
-      "models": {
-        "claude-opus-4-8": {
-          "name": "Claude Opus 4.8",
-          "tool_call": true,
-          "reasoning": true,
-          "limit": {
-            "context": 200000,
-            "output": 32000
-          }
-        }
-      }
-    }
-  },
   "agent": {
     "build": {
       "description": "Default coding agent for implementation, edits, refactors, and iterative fixes.",
       "mode": "primary",
       "model": "company/claude-opus-4-8"
     },
-    "plan": {
-      "description": "Plan mode for architecture, task decomposition, migrations, and risk analysis before edits.",
-      "mode": "primary",
+    "compaction": {
       "model": "zai-coding-plan/glm-5.2",
-      "variant": "max",
-      "permission": {
-        "read": "allow",
-        "glob": "allow",
-        "grep": "allow",
-        "list": "allow",
-        "edit": "deny",
-        "bash": "ask"
-      }
+      "variant": "max"
     },
     "explore": {
       "description": "Fast codebase exploration, file discovery, dependency tracing, and context gathering.",
@@ -53,65 +17,110 @@
       "variant": "max"
     },
     "general": {
-      "description": "Miscellaneous helper agent for small chores, routine edits, formatting, and low-risk follow-up tasks.",
+      "description": "General-purpose fallback agent for multi-step tasks that don't fit a specialist: research, cross-cutting searches, and mixed read/edit chores.",
       "mode": "all",
       "model": "kimi-for-coding/k2p7"
     },
-    "title": {
+    "plan": {
+      "description": "Plan mode for architecture, task decomposition, migrations, and risk analysis before edits.",
+      "mode": "primary",
       "model": "zai-coding-plan/glm-5.2",
+      "permission": {
+        "bash": "ask",
+        "edit": "deny",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow",
+        "read": "allow"
+      },
       "variant": "max"
     },
     "summary": {
       "model": "opencode-go/glm-5.2",
       "variant": "max"
     },
-    "compaction": {
+    "title": {
       "model": "zai-coding-plan/glm-5.2",
       "variant": "max"
     }
   },
+  "default_agent": "build",
   "mcp": {
     "codebase-memory-mcp": {
-      "type": "local",
       "command": ["/Users/tao/.local/bin/codebase-memory-mcp"],
-      "enabled": true
-    },
-    "web-search-prime": {
-      "type": "remote",
-      "url": "https://api.z.ai/api/mcp/web_search_prime/mcp",
       "enabled": true,
-      "timeout": 30000,
-      "headers": {
-        "Authorization": "Bearer {env:ZHIPU_API_KEY}"
-      }
+      "type": "local"
     },
     "web-reader": {
-      "type": "remote",
-      "url": "https://api.z.ai/api/mcp/web_reader/mcp",
       "enabled": true,
-      "timeout": 30000,
       "headers": {
         "Authorization": "Bearer {env:ZHIPU_API_KEY}"
-      }
+      },
+      "timeout": 30000,
+      "type": "remote",
+      "url": "https://api.z.ai/api/mcp/web_reader/mcp"
     },
-    "zread": {
-      "type": "remote",
-      "url": "https://api.z.ai/api/mcp/zread/mcp",
+    "web-search-prime": {
       "enabled": true,
-      "timeout": 30000,
       "headers": {
         "Authorization": "Bearer {env:ZHIPU_API_KEY}"
-      }
+      },
+      "timeout": 30000,
+      "type": "remote",
+      "url": "https://api.z.ai/api/mcp/web_search_prime/mcp"
     },
     "zai-vision": {
-      "type": "local",
       "command": ["npx", "-y", "@z_ai/mcp-server@latest"],
       "enabled": true,
-      "timeout": 30000,
       "environment": {
         "Z_AI_API_KEY": "{env:ZHIPU_API_KEY}",
         "Z_AI_MODE": "ZAI"
+      },
+      "timeout": 30000,
+      "type": "local"
+    },
+    "zread": {
+      "enabled": true,
+      "headers": {
+        "Authorization": "Bearer {env:ZHIPU_API_KEY}"
+      },
+      "timeout": 30000,
+      "type": "remote",
+      "url": "https://api.z.ai/api/mcp/zread/mcp"
+    }
+  },
+  "model": "company/claude-opus-4-8",
+  "permission": "allow",
+  "plugin": ["superpowers@git+https://github.com/obra/superpowers.git"],
+  "provider": {
+    "company": {
+      "models": {
+        "claude-opus-4-8": {
+          "limit": {
+            "context": 200000,
+            "output": 32000
+          },
+          "name": "Claude Opus 4.8",
+          "reasoning": true,
+          "tool_call": true
+        },
+        "claude-fable-5": {
+          "limit": {
+            "context": 200000,
+            "output": 32000
+          },
+          "name": "Claude Fable 5",
+          "reasoning": true,
+          "tool_call": true
+        }
+      },
+      "name": "Company Opus",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "apiKey": "sk-0l3IJWCxwYrfRoG0G",
+        "baseURL": "http://localhost:8317/v1"
       }
     }
-  }
+  },
+  "small_model": "zai-coding-plan/glm-5.2"
 }

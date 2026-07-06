@@ -90,6 +90,28 @@
       "maxOutputTokens": 16384,
       "noImageSupport": false,
       "provider": "openai"
+    },
+    {
+      "model": "mimo-v2.5-pro",
+      "id": "custom:OC:-Xiaomi-MiMo-Pro",
+      "index": 5,
+      "baseUrl": "https://token-plan-cn.xiaomimimo.com/v1",
+      "apiKey": "${XIAOMI_KEY}",
+      "displayName": "OC: Xiaomi MiMo Pro",
+      "maxOutputTokens": 16384,
+      "noImageSupport": false,
+      "provider": "openai"
+    },
+    {
+      "model": "MiniMax-M3",
+      "id": "custom:OC:-MiniMax-M3",
+      "index": 6,
+      "baseUrl": "https://api.minimaxi.com/anthropic",
+      "apiKey": "${MINIMAX_API_KEY}",
+      "displayName": "OC: MiniMax M3",
+      "maxOutputTokens": 16384,
+      "noImageSupport": false,
+      "provider": "anthropic"
     }
   ],
   "compactionModelMode": "factory-default",

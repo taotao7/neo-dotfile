@@ -1,7 +1,7 @@
 {
   "logoAnimation": "off",
   "diffMode": "github",
-  "terminalColorMode": "dark",
+  "terminalColorMode": "light",
   "hooks": {
     "PreToolUse": [
       {
@@ -15,14 +15,14 @@
       }
     ]
   },
-  "theme": "factory-dark",
+  "theme": "factory-light",
   "statusLine": {
     "type": "command",
     "command": "/Users/tao/.factory/statusline.sh"
   },
   "sessionDefaultSettings": {
-    "model": "custom:company-opus-3",
-    "reasoningEffort": "none",
+    "model": "claude-opus-4-7",
+    "reasoningEffort": "max",
     "interactionMode": "auto",
     "autonomyLevel": "high",
     "autonomyMode": "auto-high",
@@ -30,10 +30,10 @@
     "specModeReasoningEffort": "none"
   },
   "missionModelSettings": {
-    "validationWorkerModel": "gpt-5.3-codex",
-    "validationWorkerReasoningEffort": "none",
+    "validationWorkerModel": "gpt-5.4",
+    "validationWorkerReasoningEffort": "xhigh",
     "skipScrutiny": true,
-    "skipUserTesting": true
+    "skipUserTesting": false
   },
   "customModels": [
     {
@@ -767,5 +767,18 @@
   "compactionModelMode": "factory-default",
   "showThinkingInMainView": true,
   "showTokenUsageIndicator": true,
-  "nerdFont": true
+  "nerdFont": true,
+  "overrideTerminalColors": false,
+  "windowZoomLevel": 0,
+  "remoteAccessEnabled": true,
+  "reauthBannerShownTui": true,
+  "enabledPlugins": {
+    "droid-control@factory-plugins": true,
+    "core@factory-plugins": true
+  },
+  "modelFavorites": [
+    "gpt-5.5",
+    "kimi-k2.7-code",
+    "glm-5.2"
+  ]
 }

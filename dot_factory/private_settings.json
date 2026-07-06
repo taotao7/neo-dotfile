@@ -21,13 +21,13 @@
     "command": "/Users/tao/.factory/statusline.sh"
   },
   "sessionDefaultSettings": {
-    "model": "claude-opus-4-7",
+    "model": "custom:OC:-Company-Opus-4.8",
     "reasoningEffort": "max",
     "interactionMode": "auto",
     "autonomyLevel": "high",
     "autonomyMode": "auto-high",
-    "specModeModel": "custom:GPT-5.4-Codex-(High)-66",
-    "specModeReasoningEffort": "none"
+    "specModeModel": "custom:OC:-Company-GPT-5.5",
+    "specModeReasoningEffort": "max"
   },
   "missionModelSettings": {
     "validationWorkerModel": "gpt-5.4",
@@ -112,6 +112,17 @@
       "maxOutputTokens": 16384,
       "noImageSupport": false,
       "provider": "anthropic"
+    },
+    {
+      "model": "gpt-5.5",
+      "id": "custom:OC:-Company-GPT-5.5",
+      "index": 7,
+      "baseUrl": "http://localhost:8317/v1",
+      "apiKey": "${COMPANY_API_KEY}",
+      "displayName": "OC: Company GPT-5.5",
+      "maxOutputTokens": 32000,
+      "noImageSupport": false,
+      "provider": "openai"
     }
   ],
   "compactionModelMode": "factory-default",

@@ -45,7 +45,7 @@
       "displayName": "OC: Company Opus 4.8",
       "maxOutputTokens": 32000,
       "noImageSupport": false,
-      "provider": "openai"
+      "provider": "anthropic"
     },
     {
       "model": "claude-fable-5",
@@ -56,7 +56,7 @@
       "displayName": "OC: Company Fable 5",
       "maxOutputTokens": 32000,
       "noImageSupport": false,
-      "provider": "openai"
+      "provider": "anthropic"
     },
     {
       "model": "glm-5.2",

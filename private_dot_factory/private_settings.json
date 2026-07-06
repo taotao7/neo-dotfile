@@ -707,6 +707,61 @@
       "displayName": "GPT-5.4 Codex (High)",
       "noImageSupport": false,
       "provider": "openai"
+    },
+    {
+      "model": "company/claude-opus-4-8",
+      "id": "custom:OC:-Company-Opus-4.8",
+      "index": 67,
+      "baseUrl": "http://localhost:8317/v1",
+      "apiKey": "${COMPANY_API_KEY}",
+      "displayName": "OC: Company Opus 4.8",
+      "maxOutputTokens": 32000,
+      "noImageSupport": false,
+      "provider": "openai"
+    },
+    {
+      "model": "company/claude-fable-5",
+      "id": "custom:OC:-Company-Fable-5",
+      "index": 68,
+      "baseUrl": "http://localhost:8317/v1",
+      "apiKey": "${COMPANY_API_KEY}",
+      "displayName": "OC: Company Fable 5",
+      "maxOutputTokens": 32000,
+      "noImageSupport": false,
+      "provider": "openai"
+    },
+    {
+      "model": "glm-5.2",
+      "id": "custom:OC:-ZAI-Coding-Plan-GLM-5.2",
+      "index": 69,
+      "baseUrl": "https://api.z.ai/api/anthropic",
+      "apiKey": "${ZHIPU_API_KEY}",
+      "displayName": "OC: ZAI Coding Plan GLM-5.2",
+      "maxOutputTokens": 16384,
+      "noImageSupport": false,
+      "provider": "anthropic"
+    },
+    {
+      "model": "glm-5.2",
+      "id": "custom:OC:-OpenCode-Go-GLM-5.2",
+      "index": 70,
+      "baseUrl": "https://opencode.ai/zen/go",
+      "apiKey": "${OPENCODE_GO_API_KEY}",
+      "displayName": "OC: OpenCode Go GLM-5.2",
+      "maxOutputTokens": 16384,
+      "noImageSupport": false,
+      "provider": "openai"
+    },
+    {
+      "model": "k2p7",
+      "id": "custom:OC:-Kimi-K2.7",
+      "index": 71,
+      "baseUrl": "https://api.moonshot.cn/v1",
+      "apiKey": "${KIMI_API_KEY}",
+      "displayName": "OC: Kimi K2.7",
+      "maxOutputTokens": 16384,
+      "noImageSupport": false,
+      "provider": "openai"
     }
   ],
   "compactionModelMode": "factory-default",

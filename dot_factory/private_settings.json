@@ -27,7 +27,7 @@
     "autonomyLevel": "high",
     "autonomyMode": "auto-high",
     "specModeModel": "custom:OC:-Company-GPT-5.5",
-    "specModeReasoningEffort": "max"
+    "specModeReasoningEffort": "xhigh"
   },
   "missionModelSettings": {
     "validationWorkerModel": "gpt-5.4",
@@ -117,8 +117,8 @@
       "model": "gpt-5.5",
       "id": "custom:OC:-Company-GPT-5.5",
       "index": 7,
-      "baseUrl": "http://localhost:8317/v1",
-      "apiKey": "${COMPANY_API_KEY}",
+      "baseUrl": "https://token.jinguobyte.com/v1",
+      "apiKey": "${JINBUO_API_KEY}",
       "displayName": "OC: Company GPT-5.5",
       "maxOutputTokens": 32000,
       "noImageSupport": false,

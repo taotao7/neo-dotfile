@@ -1,0 +1,42 @@
+{
+  "mcpServers": {
+    "context7": {
+      "type": "http",
+      "url": "https://mcp.context7.com/mcp",
+      "disabled": false
+    },
+    "codebase-memory-mcp": {
+      "type": "stdio",
+      "command": ["/Users/tao/.local/bin/codebase-memory-mcp"]
+    },
+    "web-reader": {
+      "type": "http",
+      "url": "https://api.z.ai/api/mcp/web_reader/mcp",
+      "headers": {
+        "Authorization": "Bearer ${ZHIPU_API_KEY}"
+      }
+    },
+    "web-search-prime": {
+      "type": "http",
+      "url": "https://api.z.ai/api/mcp/web_search_prime/mcp",
+      "headers": {
+        "Authorization": "Bearer ${ZHIPU_API_KEY}"
+      }
+    },
+    "zai-vision": {
+      "type": "stdio",
+      "command": ["npx", "-y", "@z_ai/mcp-server@latest"],
+      "env": {
+        "Z_AI_API_KEY": "${ZHIPU_API_KEY}",
+        "Z_AI_MODE": "ZAI"
+      }
+    },
+    "zread": {
+      "type": "http",
+      "url": "https://api.z.ai/api/mcp/zread/mcp",
+      "headers": {
+        "Authorization": "Bearer ${ZHIPU_API_KEY}"
+      }
+    }
+  }
+}

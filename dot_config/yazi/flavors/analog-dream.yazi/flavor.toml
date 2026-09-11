@@ -1,0 +1,123 @@
+# Analog Dream: Beige Terminal — Yazi Flavor
+# Palette from cassette-futurism-theme (light variant)
+
+[mgr]
+cwd             = { fg = "#458588" }
+find_keyword    = { fg = "#b57614", bold = true, italic = true }
+find_position   = { fg = "#b16286", bg = "reset", italic = true }
+symlink_target  = { fg = "#458588", italic = true }
+marker_selected = { fg = "#f5f0e8", bg = "#79740e" }
+marker_copied   = { fg = "#f5f0e8", bg = "#b57614" }
+marker_cut      = { fg = "#f5f0e8", bg = "#9d0006" }
+marker_marked   = { fg = "#f5f0e8", bg = "#458588" }
+count_selected  = { fg = "#79740e", bg = "#ede8e0" }
+count_copied    = { fg = "#b57614", bg = "#ede8e0" }
+count_cut       = { fg = "#9d0006", bg = "#ede8e0" }
+border_symbol   = "│"
+border_style    = { fg = "#c4b8a8" }
+
+[app]
+overall = { bg = "reset" }
+
+[tabs]
+active   = { fg = "#2d2a27", bg = "#d4c8b8", bold = true }
+inactive = { fg = "#928374", bg = "reset" }
+
+[indicator]
+parent  = { fg = "#928374", bg = "reset" }
+current = { fg = "#2d2a27", bg = "#d4c8b8", bold = true }
+preview = { fg = "#928374", bg = "reset" }
+
+[mode]
+normal_main = { fg = "#f5f0e8", bg = "#458588", bold = true }
+normal_alt  = { fg = "#458588", bg = "reset" }
+select_main = { fg = "#f5f0e8", bg = "#79740e", bold = true }
+select_alt  = { fg = "#79740e", bg = "reset" }
+unset_main  = { fg = "#f5f0e8", bg = "#d65d0e", bold = true }
+unset_alt   = { fg = "#d65d0e", bg = "reset" }
+
+[status]
+overall         = { bg = "reset" }
+perm_type       = { fg = "#458588" }
+perm_read       = { fg = "#b57614" }
+perm_write      = { fg = "#9d0006" }
+perm_exec       = { fg = "#79740e" }
+perm_sep        = { fg = "#928374" }
+progress_label  = { fg = "#2d2a27", bold = true }
+progress_normal = { fg = "#458588" }
+progress_error  = { fg = "#9d0006" }
+
+[which]
+cols            = 3
+mask            = { bg = "reset" }
+cand            = { fg = "#458588" }
+rest            = { fg = "#928374" }
+desc            = { fg = "#2d2a27" }
+separator       = "  "
+separator_style = { fg = "#c4b8a8" }
+
+[confirm]
+border  = { fg = "#c4b8a8" }
+title   = { fg = "#b16286" }
+body    = { fg = "#2d2a27" }
+list    = { fg = "#6b6560" }
+btn_yes = { fg = "#f5f0e8", bg = "#79740e", bold = true }
+btn_no  = { fg = "#f5f0e8", bg = "#9d0006", bold = true }
+
+[spot]
+border   = { fg = "#c4b8a8" }
+title    = { fg = "#b16286" }
+tbl_col  = { fg = "#458588", bold = true }
+tbl_cell = { fg = "#2d2a27" }
+
+[notify]
+title_info  = { fg = "#458588" }
+title_warn  = { fg = "#d65d0e" }
+title_error = { fg = "#9d0006" }
+
+[pick]
+border   = { fg = "#c4b8a8" }
+active   = { fg = "#f5f0e8", bg = "#458588", bold = true }
+inactive = { fg = "#6b6560" }
+
+[input]
+border   = { fg = "#c4b8a8" }
+title    = { fg = "#b16286" }
+value    = { fg = "#2d2a27" }
+selected = { fg = "#f5f0e8", bg = "#458588" }
+
+[cmp]
+border   = { fg = "#c4b8a8" }
+active   = { fg = "#f5f0e8", bg = "#458588", bold = true }
+inactive = { fg = "#6b6560" }
+
+[tasks]
+border  = { fg = "#c4b8a8" }
+title   = { fg = "#b16286" }
+hovered = { fg = "#2d2a27", underline = true }
+
+[help]
+on      = { fg = "#458588" }
+run     = { fg = "#b16286" }
+desc    = { fg = "#2d2a27" }
+hovered = { reversed = true, bold = true }
+footer  = { fg = "#f5f0e8", bg = "#928374" }
+
+[filetype]
+rules = [
+  { mime = "image/*",                     fg = "#b16286" },
+  { mime = "video/*",                     fg = "#076678" },
+  { mime = "audio/*",                     fg = "#458588" },
+  { mime = "application/zip",             fg = "#d65d0e" },
+  { mime = "application/gzip",            fg = "#d65d0e" },
+  { mime = "application/x-tar",           fg = "#d65d0e" },
+  { mime = "application/x-bzip2",         fg = "#d65d0e" },
+  { mime = "application/x-7z-compressed", fg = "#d65d0e" },
+  { mime = "application/x-rar",           fg = "#d65d0e" },
+  { mime = "application/pdf",             fg = "#9d0006" },
+  { url = "*", is = "exec",              fg = "#79740e" },
+  { url = "*", is = "orphan",            fg = "#9d0006", underline = true },
+  { url = "*", is = "link",              fg = "#458588" },
+  { url = "*/",                          fg = "#076678" },
+  { url = "*",                           fg = "#2d2a27" },
+]
